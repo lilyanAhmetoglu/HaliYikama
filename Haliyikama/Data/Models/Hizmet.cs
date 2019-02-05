@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// this model is for the service that we need to add to the site
 namespace Haliyikama.Data.Models
 {
-	public class Labor
+	public class Hizmet
 	{
-		public int LaborId { get; set; }
+		public int HizmetId { get; set; }
 		public string Name { get; set; }
 		public string ShortDescription { get; set; }
 		public string LongDescription { get; set; }
@@ -16,5 +15,6 @@ namespace Haliyikama.Data.Models
 		public int NewPrice { get; set; }
 		public string ImageUrl { get; set; }
 		public bool IsDiscounted { get; set; }
+		public List<AltHizmet> AltHizmetler { get; set; }
 	}
 }
