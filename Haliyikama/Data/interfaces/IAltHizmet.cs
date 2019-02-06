@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Haliyikama.Data.interfaces
 {
-	interface IAltHizmet
+	public interface IAltHizmet
 	{ 
 
 		IEnumerable<AltHizmet> AltHizmetler { get; set; }

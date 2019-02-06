@@ -1,0 +1,18 @@
+﻿@using Haliyikama.Data.Models
+
+@model IEnumerable<Hizmet>
+@{
+}
+
+<div>
+	<h2>butun hizmet asagada</h2>
+</div>
+@{ 
+	foreach (var hizmet in Model)
+	{
+		<div>
+			<h4>Hzimet Adi :@hizmet.Name</h4>
+			<p>fiyat: @hizmet.Price.ToString("c")</p>
+		</div>
+	}
+}

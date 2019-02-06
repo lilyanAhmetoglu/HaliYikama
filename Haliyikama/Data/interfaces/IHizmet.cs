@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Haliyikama.Data.interfaces
 {
-	interface IHizmet
+	public interface IHizmet
 	{
 		IEnumerable<Hizmet> Hizmetler { get; set; }
 		IEnumerable<Hizmet> IsdsicountedHizmet { get; set; }
