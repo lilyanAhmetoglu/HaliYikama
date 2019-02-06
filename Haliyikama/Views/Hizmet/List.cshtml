@@ -1,14 +1,15 @@
-﻿@using Haliyikama.Data.Models
+﻿@using Haliyikama.ViewModels
 
-@model IEnumerable<Hizmet>
+
 @{
+
 }
 
 <div>
 	<h2>butun hizmet asagada</h2>
 </div>
 @{ 
-	foreach (var hizmet in Model)
+	foreach (var hizmet in Model.Hizmetler)
 	{
 		<div>
 			<h4>Hzimet Adi :@hizmet.Name</h4>

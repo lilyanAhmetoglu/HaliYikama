@@ -1,4 +1,5 @@
 ﻿using Haliyikama.Data.interfaces;
+using Haliyikama.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -19,8 +20,11 @@ namespace Haliyikama.Controllers
 		}
 		public ViewResult List()
 		{
-			var hizmetler = _hizmet.Hizmetler;
-			return View(hizmetler);
+		//	var hizmetler = _hizmet.Hizmetler;
+			HizmetListViewModel HizmetVM = new HizmetListViewModel();
+			HizmetVM.Hizmetler = _hizmet.Hizmetler;
+
+			return View(HizmetVM);
 
 		}
 	}
