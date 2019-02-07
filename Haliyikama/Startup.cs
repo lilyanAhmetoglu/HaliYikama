@@ -39,7 +39,7 @@ namespace Haliyikama
 
 			app.UseDeveloperExceptionPage();
 			app.UseStatusCodePages();
-			//app.UseSpaStaticFiles();
+			app.UseStaticFiles();
 			app.UseMvcWithDefaultRoute();
 		
 		}

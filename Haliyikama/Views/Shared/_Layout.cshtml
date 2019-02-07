@@ -2,12 +2,21 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" runat="server"/>
+	<link href="~/Content/site.css" rel="stylesheet" runat="server"/>
+	<script src="~/lib/jquery/dist/jquery.js" runat="server"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.js" runat="server"></script>
+	<title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
+    <div class="conrainer body-content" >
         @RenderBody()
     </div>
+	</hr>
+	<footer>
+		<p><a target="_blank" href="https://www.artirex.com/"> &copy; 2019 - Artirex</a></p>
+	</footer>
 </body>
 </html>
