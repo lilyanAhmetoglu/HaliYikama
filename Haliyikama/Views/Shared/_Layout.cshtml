@@ -3,16 +3,98 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro">
-	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" runat="server"/>
-	<link href="~/Content/site.css" rel="stylesheet" runat="server"/>
+	<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" runat="server" />
+	<link href="~/Content/site.css" rel="stylesheet" runat="server" />
 	<script src="~/lib/jquery/dist/jquery.js" runat="server"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.js" runat="server"></script>
+	<script src="https://use.fontawesome.com/f12e4a6b3c.js"></script>
 	<title>Halı Yıkama</title>
 </head>
 <body>
-    <div class="container body-content" >
-        @RenderBody()
-    </div>
+	<!--Main Navigation-->
+	<header>
+
+		<nav id="navtop">
+			<div class="container-fluid">
+				<!--header navbar top left -->
+				<ul class="nav navbar-nav" id="nav-left">
+					<li>
+						<a href="#">
+							<i class="fa fa-phone" aria-hidden="true"></i>TELEFON
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-envelope-open" aria-hidden="true"></i>EPOSTA
+						</a>
+					</li>
+					
+				</ul>
+
+				<!--header navbar top right -->
+				<ul class="nav navbar-nav nav-pills" id="nav-right">
+					<li>
+						<a href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>FACEBOOK
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-instagram" aria-hidden="true"></i>INSTAGRAM
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-twitter" aria-hidden="true"></i>TWITTER
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-user" aria-hidden="true"></i>HESABIM
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fa fa-check-square-o" aria-hidden="true"></i>GİRİŞ
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--header navbar LOGO -->
+		<div class="text-center" id="logo">
+			<a href="#"><img src="https://www.artirex.com/uploads/thumb/logo.png" alt="logo" /></a>
+		</div>
+		<!-- TOOGLE MAIN NAVIGATION -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<!--  MAIN NAVIGATION -->
+		<div class="collapse navbar-collapse" id="main-navigation">
+			<div class="container">
+				<ul class="nav nav-justified nav-pills">
+					<li class="active"><a href="#">HOMEPAGE</a></li>
+					<li><a href="#">HİZMETLER</a></li>
+					<li><a href="#">SERVİSLER</a></li>
+					<li><a href="#">HAKKIMIZDA</a></li>
+					<li><a href="#">ILETİŞİM</a></li>
+					<li><a href="#">BİLGİLER</a></li>					
+				</ul>
+			</div>
+		</div>
+		<!--header navbar END -->
+
+
+	</header>
+
+	<div class="container body-content">
+		@RenderBody()
+	</div>
 	</hr>
 	<footer>
 		<p><a target="_blank" href="https://www.artirex.com/"> &copy; 2019 - Artirex</a></p>
