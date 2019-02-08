@@ -5,9 +5,7 @@
 	margin-right: 8px;
 }
 
-nav {
-	padding: 8px;
-}
+
 
 .loginForm {
 	margin: 10%;
@@ -53,9 +51,18 @@ a.remove {
 	min-width: 100%;
 }
 * {
-	color: #b8b8b8 !important;
+	/*color: #fff !important;*/
 }
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	color: #7079c6 !important;
+}
+#a-color {
+	color: #7079c6 !important;
+}
+#a-color-nav {
+	color: #fff !important;
+}
 /*Inline*/
 .display-inline {
 	display:inline-block;
@@ -70,6 +77,7 @@ a.remove {
 	text-decoration: none;
 	background-color: #fff;
 	color: #7079c6 !important;
+	
 }
 
 .nav-pills > li.active > a {
@@ -110,7 +118,10 @@ a.remove {
 #nav-right {
 	margin-right: 15px;
 }
-
+#nav-center {
+	text-align: center;
+	width: 100%;
+}
 #navtop {
 	font-size: 10px !important;
 }
@@ -118,10 +129,15 @@ a.remove {
 .fa {
 	padding-right: 10px;
 	font-size: 14px;
-	color: #9a9a9a !important;
+	color: #F9B33B !important;
+}
+#nav-header .fa {
+	color: #ffffff !important;
 }
 #icon-big .fa {
 	font-size: 36px;
+	border-right: 1px solid #ccc;
+	padding-left: 7px;
 }
 #logo a img {
 
@@ -137,6 +153,8 @@ a.remove {
 	#main-navigation .nav > li > a {
 		padding-left: 0;
 		padding-right: 0;
+		color:#fff;
+
 	}
 
 	#main-navigation .container {
@@ -176,16 +194,19 @@ a.remove {
 			width: 23%;
 			padding: 1%;
 		}
-
+	
 	#logo a img {
-		margin-top: 0;
-		margin-bottom: 0;
+		
 	}
 	
 	#main-navigation ul li {
 		border-top: 1px solid #7178c6;
 		width: 100%;
 	}
+}
+.nav-justified {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 /* MEDIA QUERIES FOR TOP NAV END*/
 /* HEADER END*/
@@ -246,5 +267,137 @@ img {
 }
 section{
 	margin-top:50px;
-	margin-bottom:30px;
+	margin-bottom:80px;
+}
+
+.blue-light{
+	background-color:#39aae1;
+}
+.blue-dark{
+	background-color:#286dae;
+}
+.section-video {
+	background-color: antiquewhite;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+#sign {
+	position: absolute;
+	margin-top: auto;
+	margin-bottom: auto;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	font-size: 14px;
+	z-index: 101;
+	height: 50px;
+	line-height: 40px;
+	padding-right: 10px;
+}
+	#sign a {
+		border-right: 1px solid #ccc;
+		padding-right: 7px;
+		color: #286dae;
+	}
+		#sign a:last-child {
+			border: none;
+		}
+span {
+	color: #286dae !important;
+}
+/* carousel */
+#quote-carousel {
+	padding: 0 10px 30px 10px;
+	margin-top: 30px;
+}
+
+	/* Control buttons  */
+	#quote-carousel .carousel-control {
+		background: none;
+		color: #222;
+		font-size: 2.3em;
+		text-shadow: none;
+		margin-top: 30px;
+	}
+		/* Previous button  */
+		#quote-carousel .carousel-control.left {
+			left: -12px;
+		}
+		/* Next button  */
+		#quote-carousel .carousel-control.right {
+			right: -12px !important;
+		}
+	/* Changes the position of the indicators */
+	#quote-carousel .carousel-indicators {
+		right: 50%;
+		top: auto;
+		
+		margin-right: -19px;
+	}
+		/* Changes the color of the indicators */
+		#quote-carousel .carousel-indicators li {
+			background: #c0c0c0;
+		}
+
+		#quote-carousel .carousel-indicators .active {
+			background: #333333;
+		}
+
+	#quote-carousel img {
+		width: 250px;
+		height: 100px
+	}
+/* End carousel */
+
+.item blockquote {
+	border-left: none;
+	margin: 0;
+}
+
+	.item blockquote img {
+		margin-bottom: 10px;
+	}
+
+	.item blockquote p:before {
+		content: "\f10d";
+		font-family: 'Fontawesome';
+		float: left;
+		margin-right: 10px;
+	}
+
+
+
+/**
+  MEDIA QUERIES
+*/
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	#quote-carousel {
+		margin-bottom: 0;
+		padding: 0 40px 30px 40px;
+	}
+}
+
+/* Small devices (tablets, up to 768px) */
+@media (max-width: 768px) {
+
+	/* Make the indicators larger for easier clicking with fingers/thumb on mobile */
+
+	#quote-carousel .carousel-indicators {
+		bottom: -20px !important;
+	}
+
+		#quote-carousel .carousel-indicators li {
+			display: inline-block;
+			margin: 0px 5px;
+			width: 15px;
+			height: 15px;
+		}
+
+			#quote-carousel .carousel-indicators li.active {
+				margin: 0px 5px;
+				width: 20px;
+				height: 20px;
+			}
 }
