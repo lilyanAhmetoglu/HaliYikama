@@ -56,7 +56,10 @@ a.remove {
 	color: #b8b8b8 !important;
 }
 
-
+/*Inline*/
+.display-inline {
+	display:inline-block;
+}
 
 /* HEADER */
 #nav-right {
@@ -117,11 +120,14 @@ a.remove {
 	font-size: 14px;
 	color: #9a9a9a !important;
 }
-
-#logo a img {
-	margin-top: -25px;
-	margin-bottom: 30px;
+#icon-big .fa {
+	font-size: 36px;
 }
+#logo a img {
+
+    margin:15px;
+}
+
 
 #main-navigation {
 	font-size: 12px !important;
@@ -175,7 +181,7 @@ a.remove {
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-
+	
 	#main-navigation ul li {
 		border-top: 1px solid #7178c6;
 		width: 100%;
@@ -231,3 +237,14 @@ a.remove {
 	right: 50px;
 }
 /* SLIDER END*/
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+img {
+	width: 100%;
+}
+section{
+	margin-top:50px;
+	margin-bottom:30px;
+}
