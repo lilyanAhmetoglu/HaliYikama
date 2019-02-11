@@ -8,23 +8,26 @@
 <div>
 	<h2>butun hizmet asagada</h2>
 </div>
-<section>
-	@{
-		foreach (var hizmet in Model.Hizmetler)
-		{
-			<div class="col-sm-4 col-lg-4 col-md-4">
-				<div class="thumbnail">
-					<img src="https://via.placeholder.com/150" />
-					<div class="caption">
-						<h3 class="pull-right">@hizmet.Price.ToString("c")</h3>
-						<h3>
-							<a>@hizmet.Name</a>
-						</h3>
-						<p>@hizmet.ShortDescription</p>
+<div class="container">
+	<section>
+		@{
+			foreach (var hizmet in Model.Hizmetler)
+			{
+				<div class="col-sm-4 col-lg-4 col-md-4">
+					<div class="thumbnail">
+						<img src="https://via.placeholder.com/150" />
+						<div class="caption">
+							<h3 class="pull-right">@hizmet.Price.ToString("c")</h3>
+							<h3>
+								<a>@hizmet.Name</a>
+							</h3>
+							<p>@hizmet.ShortDescription</p>
+						</div>
 					</div>
 				</div>
-			</div>
+			}
 		}
-	}
 
-</section>
+	</section>
+</div>
+

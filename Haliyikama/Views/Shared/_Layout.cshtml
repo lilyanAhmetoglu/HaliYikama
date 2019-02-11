@@ -30,36 +30,34 @@ $(document).ready(function() {
 				<ul class="nav navbar-nav " id="nav-left">
 					<li>
 						<a href="#" id="a-color-nav">
-							<i class="fa fa-phone" id="nav-header " aria-hidden="true"></i>TELEFON
+							<i class="fa fa-phone" id="nav-header " aria-hidden="true"></i><span class="hidden-xs">TELEFON</span>
 						</a>
 					</li>
 					<li>
 						<a href="#" id="a-color-nav">
-							<i class="fa fa-envelope-open" id="nav-header "  aria-hidden="true"></i>EPOSTA
+							<i class="fa fa-envelope-open" id="nav-header " aria-hidden="true"></i> <span class="hidden-xs">EPOSTA</span>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" id="a-color-nav">
+							<i class="fa fa-facebook" aria-hidden="true"></i><span class="hidden-xs">FACEBOOK</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" id="a-color-nav">
+							<i class="fa fa-instagram" aria-hidden="true"></i><span class="hidden-xs">INSTAGRAM</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" id="a-color-nav">
+							<i class="fa fa-twitter" aria-hidden="true"></i><span class="hidden-xs">TWITTER</span>
 						</a>
 					</li>
 
 				</ul>
 
-				<!--header navbar top right -->
-				<ul class="nav navbar-nav nav-pills" id="nav-right">
-					<li>
-						<a href="#" id="a-color-nav">
-							<i class="fa fa-facebook" aria-hidden="true"></i>FACEBOOK
-						</a>
-					</li>
-					<li>
-						<a href="#" id="a-color-nav">
-							<i class="fa fa-instagram" aria-hidden="true"></i>INSTAGRAM
-						</a>
-					</li>
-					<li>
-						<a href="#" id="a-color-nav">
-							<i class="fa fa-twitter" aria-hidden="true"></i>TWITTER
-						</a>
-					</li>
-				
-				</ul>
+
 			</div>
 		</nav>
 		<!--header navbar LOGO -->
@@ -86,19 +84,19 @@ $(document).ready(function() {
 					</div>
 
 				</div>
-				<div class="col-md-4 col-xs-7">			
-						<ul class="nav navbar-nav nav-pills" id="nav-center">
-							<li id="nav-center">
+				<div class="col-md-4 col-xs-7">
+					<ul class="nav navbar-nav nav-pills" id="nav-center">
+						<li id="nav-center">
 
-								<h1>0212 0212 00 00 </h1>
+							<h1>0212 0212 00 00 </h1>
 
-							</li>
-						</ul>
+						</li>
+					</ul>
 				</div>
 				<div class="col-md-3 col-xs-2">
-					
+
 					<div class="text-right" id="icon-big">
-						<ul class="nav navbar-nav nav-pills"  id="nav-right">
+						<ul class="nav navbar-nav nav-pills" id="nav-right">
 							<li>
 								<a href="#" id="a-color">
 									<i class="fa fa-whatsapp" aria-hidden="true"></i>
@@ -106,7 +104,7 @@ $(document).ready(function() {
 							</li>
 
 						</ul>
-					</div>			
+					</div>
 				</div>
 				<div class="col-md-2 col-xs-3">
 					<div class="text-right" id="nav-left">
@@ -119,27 +117,29 @@ $(document).ready(function() {
 				</div>
 
 
-					<!-- TOOGLE MAIN NAVIGATION -->
-				</div>
+				<!-- TOOGLE MAIN NAVIGATION -->
+			</div>
 		</div>
 		<div class="container-fluid blue-light">
 			<!--  MAIN NAVIGATION -->
 			<div class="collapse navbar-collapse" id="main-navigation">
 				<div class="container">
 					<ul class="nav nav-justified nav-pills">
-						<li class="active"><a href="#">HOMEPAGE</a></li>
-						<li><a href="#">HİZMETLER</a></li>
+						<li class="active"><a href="/">ANASAYFA</a></li>
+						<li><a href="~/Hizmet/List">HİZMETLER</a></li>
 						<li><a href="#">SERVİSLER</a></li>
 						<li><a href="#">HAKKIMIZDA</a></li>
 						<li><a href="#">ILETİŞİM</a></li>
 						<li><a href="#">BİLGİLER</a></li>
+						<li><a href="#" class="button" style="">Sipraiş Ver</a></li>
 					</ul>
+
 				</div>
 			</div>
 			<!--header navbar END -->
 		</div>
-			
-		
+
+
 
 
 
@@ -149,8 +149,61 @@ $(document).ready(function() {
 		@RenderBody()
 	</div>
 	</hr>
-	<footer class="fixed-bottom">
-	       <p class="text-center"><a target="_blank" href="https://www.artirex.com/"> &copy; 2019 - Artirex</a></p>
-	</footer>
+	<div class="container-fluid blue-dark footer-section">
+		<div class="container">
+			<footer class="footer-bs">
+				<div class="row">
+					<div class="col-md-3 footer-brand animated fadeInLeft">
+						<h2>Logo</h2>
+						<p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem.</p>
+						<p class="text-center"><a target="_blank" href="https://www.artirex.com/"> &copy; 2019 - Artirex</a></p>
+					</div>
+					<div class="col-md-4 footer-nav animated fadeInUp">
+						<h4>Hizmetler —</h4>
+						<div class="col-md-6">
+							<ul class="pages">
+								<li><a href="#">Hizmet 1</a></li>
+								<li><a href="#">Hizmet 2</a></li>
+								<li><a href="#">Hizmet 3</a></li>
+								<li><a href="#">Hizmet 4</a></li>
+								<li><a href="#">Hizmet 5</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<ul class="list">
+								<li><a href="#">Servisler</a></li>
+								<li><a href="#">Hakkımızda</a></li>
+								<li><a href="#">İletişim</a></li>
+								<li><a href="#">Faydalı Bilgiler</a></li>
+
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-2 footer-social animated fadeInDown">
+						<h4>Bize Takip edin</h4>
+						<ul>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Instagram</a></li>
+							<li><a href="#">RSS</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 footer-ns animated fadeInRight">
+						<h4>Newsletter</h4>
+						<p>A rover wearing a fuzzy suit doesn’t alarm the real penguins</p>
+						<p>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search for...">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-envelope"></span></button>
+								</span>
+							</div><!-- /input-group -->
+						</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	
 </body>
 </html>
