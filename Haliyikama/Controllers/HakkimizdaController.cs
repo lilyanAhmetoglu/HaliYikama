@@ -6,15 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Haliyikama.Controllers
 {
-    public class HomeController : Controller
+    public class HakkimizdaController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-		public IActionResult Hakkimizda()
-		{
-			return View();
-		}
-	}
+    }
 }
