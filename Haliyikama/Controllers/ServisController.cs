@@ -6,13 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Haliyikama.Controllers
 {
-    public class HomeController : Controller
+    public class ServisController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
-
-	}
+    }
 }

@@ -144,9 +144,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin:15px;
 }
 .button {
-	font: bold 11px Arial;
+	font: bold 16px Arial;
 	text-decoration: none;
-
+	
 	background-color: #F9B33B;
 	color: #333333;
 	padding: 2px 6px 2px 6px;
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	}
 
 	#main-navigation .container {
-		max-width: 720px;
+		/*max-width: 720px;*/
 	}
 /* MEDIA QUERIES FOR TOP NAV*/
 @media screen and (max-width:768px) {
@@ -560,6 +560,43 @@ a span {
 			font-weight: 300;
 		}
 
+/*5 Columns */
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+	position: relative;
+	min-height: 1px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.col-xs-15 {
+	width: 20%;
+	float: left;
+}
+
+@media (min-width: 768px) {
+	.col-sm-15 {
+		width: 20%;
+		float: left;
+	}
+}
+
+@media (min-width: 992px) {
+	.col-md-15 {
+		width: 20%;
+		float: left;
+	}
+}
+
+@media (min-width: 1200px) {
+	.col-lg-15 {
+		width: 20%;
+		float: left;
+	}
+}
+
 
 .servisler{
 	margin-top:100px
@@ -597,8 +634,7 @@ a:hover {
 	position: relative;
 	overflow: hidden;
 	
-	margin-left: 10%;
-	margin-right: 10%;
+
 }
 	.bolge_container .servis-bolge {
 		
@@ -635,6 +671,147 @@ a:hover {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+/*Hizmet*/
+.Banner-Backgroun {
+	background-color: #eeeeee;
+}
+.jumbotron {
+	margin-bottom: 0px;
+	padding-top: 38px;
+	padding-bottom: 38px;
+}
+.jumbotron h1, .jumbotron .h1 {
+	font-size: 43px;
+}
+.breadcrumb {
+	background: rgba(245, 245, 245, 0);
+	border: 0px solid rgba(245, 245, 245, 1);
+	border-radius: 25px;
+	display: block;
+}
+
+
+
+.new-deal {
+	width: 100%;
+
+	padding: 15px 0;
+}
+	.new-deal .item-slide {
+		position: relative;
+		overflow: hidden;
+		transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		margin: 15px 0;
+	}
+
+	.new-deal .slide-hover {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: -100%;
+		background: rgba(0,0,0,.5);
+		top: 0;
+		transition: all .5s ease;
+		-moz-transition: all .5s ease;
+		-webkit-transition: all .5s ease;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+
+	.new-deal .item-slide:hover .slide-hover {
+		left: 0px;
+	}
+
+	.new-deal img {
+		max-width: 100%;
+	}
+
+.text-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	background: rgba(0, 0, 0, .5);
+	z-index: 999;
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+	.text-wrap h4 {
+		padding: 0 5px;
+		color: #fff;
+
+	}
+
+.box-img {
+	width: 100%;
+	float: left;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+}
+
+.text-wrap .desc {
+	width: 50%;
+	float: left;
+	padding: 0 5px;
+}
+
+.text-wrap p {
+	padding: 15px;
+	font-size: 15px;
+	text-align: center;
+	font-weight: normal;
+	text-shadow: 2px 2px 3px #000;
+}
+
+.text-wrap .desc h4 {
+	margin: 0px;
+	font: 400 17px/21px "Roboto";
+	color:#fff;
+}
+
+.text-wrap .desc h3 {
+	margin: 0px;
+	font: 400 32px/36px "Roboto";
+	color: #fff;
+}
+
+.new-deal .item-slide:hover .text-wrap {
+	background: none
+}
+
+.book-now-c {
+	float: right;
+	padding: 10px;
+}
+
+	.book-now-c a {
+		background: #029a8b;
+		color: #fff;
+		padding: 5px;
+		border-radius: 5px;
+		margin-top: 0px;
+		float: left;
+		min-width: 101px;
+		text-align: center;
+		font-size: 16px;
+	}
+
+.new-deal .item-slide:hover .box-img .text-wrap {
+	bottom: -100%;
+}
+
+
+/*Footer*/
 .footer-section {
 	margin-top: 50px;
 }	

@@ -5,17 +5,34 @@
 
 }
 
-<div>
-	<h2>butun hizmet asagada</h2>
+<div class="container-fluid Banner-Backgroun" >
+	<div class="container">
+		<div class="jumbotron">
+			<h1>HİZMETLERİMİZ</h1>
+			<p>Değerli Arnavutköy sakinleri, yaşam alanlarınızda bulunan her cins ve her ebattaki halıların temizleme </p>
+			
+		</div>
+		<div class="row">
+
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Library</a></li>
+				<li class="active">Data</li>
+			</ul>
+		</div>
+	</div>
+	
+
 </div>
+
 <div class="container">
 	<section>
 		@{
 			foreach (var hizmet in Model.Hizmetler)
 			{
-				<div class="col-sm-4 col-lg-4 col-md-4">
+				<div class="col-xs-12 col-sm-4 col-lg-3 col-md-3">
 					<div class="thumbnail">
-						<img src="https://via.placeholder.com/150" />
+						<img src="~/Images/6.jpg" />
 						<div class="caption">
 							<h3 class="pull-right">@hizmet.Price.ToString("c")</h3>
 							<h3>
