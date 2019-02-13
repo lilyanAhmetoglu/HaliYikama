@@ -8,8 +8,8 @@ namespace Haliyikama.Data.interfaces
 {
 	public interface IHizmet
 	{
-		IEnumerable<Hizmet> Hizmetler { get; set; }
-		IEnumerable<Hizmet> IsdsicountedHizmet { get; set; }
+		IEnumerable<Hizmet> Hizmetler { get; }
+		IEnumerable<Hizmet> IsdsicountedHizmet { get;}
 		Hizmet getHizmetById(int id);
 	}
 }
