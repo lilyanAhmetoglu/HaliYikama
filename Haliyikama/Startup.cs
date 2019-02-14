@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Haliyikama.Data;
 using Microsoft.EntityFrameworkCore;
 using Haliyikama.Data.Repositories;
+using Haliyikama.Data.Models;
 
 namespace Haliyikama
 {
@@ -60,6 +61,9 @@ namespace Haliyikama
 			app.UseStatusCodePages();
 			app.UseStaticFiles();
 			app.UseMvcWithDefaultRoute();
+			
+			
+			
 		
 		}
 	}
