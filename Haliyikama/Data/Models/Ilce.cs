@@ -9,7 +9,9 @@ namespace Haliyikama.Data.Models
 	{
 		public int IlceId { get; set; }
 		public string Name { get; set; }
-		public string Description { get; set; }
+		public string ShortDescription { get; set; }
+		public string LongDescription { get; set; }
+		public string ImageURL { get; set; }
 		public List<Semt> Semtler { get; set; }
 	}
 }

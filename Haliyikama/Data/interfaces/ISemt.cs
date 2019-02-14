@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Haliyikama.Data.interfaces
 {
-	interface ISemt
+	public interface ISemt
 	{
 		IEnumerable<Semt> Semtler { get; set; }
 		Semt getSemtById(int id);

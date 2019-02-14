@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Haliyikama.Data.interfaces
+namespace Haliyikama.ViewModels
 {
-	public interface IIlce
+	public class AltHizmetListViewModel
 	{
-		IEnumerable<Ilce> Ilceler { get;  }
-		Ilce getIlceById(int id);
+		public IEnumerable<AltHizmet> AlHizmetler { get; set; }
 	}
 }
