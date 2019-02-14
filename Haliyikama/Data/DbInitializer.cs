@@ -52,7 +52,42 @@ namespace Haliyikama.Data.Models
 						}
 						);
 				}
-				context.SaveChanges();
+
+
+
+				//Ilceler And Semtler Data 
+			if (!context.Ilceler.Any())
+			{
+				context.Ilceler.AddRange(Ilceler.Select(c => c.Value));
+			}
+			if (!context.Semtler.Any())
+			{
+				context.AddRange
+					(
+					new Semt
+					{
+						Name ="Basak Mah",
+						Description ="yazi burda",
+						Ilce  = Ilceler["Arnavutköy"]
+						
+					},
+					new Semt
+					{
+						Name ="Beyan",
+						Description="yazi burda",
+						Ilce = Ilceler["Arnavutköy"]
+					},
+					new Semt
+					{
+						Name = "Beyan2",
+						Description = "yazi burda",
+						Ilce = Ilceler["Avcılar"]
+					}
+					);
+			}
+			context.SaveChanges();
+
+			   
 			
 		}
 		private static Dictionary<string, Hizmet> hizmetler;
@@ -112,6 +147,75 @@ namespace Haliyikama.Data.Models
 					}
 				}
 				return hizmetler;
+			}
+		}
+
+		private static Dictionary<string, Ilce> ilceler;
+		public static Dictionary<string, Ilce> Ilceler
+		{
+			get
+			{
+				if (ilceler == null)
+				{
+					var genersList = new Ilce[]
+					{
+						new Ilce
+						{
+							Name="Arnavutköy",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						},
+						new Ilce
+						{
+							Name="Ataşehir",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						},
+						new Ilce
+						{
+							Name="Avcılar",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						},
+						new Ilce
+						{
+							Name="Bağcılar",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						},
+						new Ilce
+						{
+							Name="Bahçelievler",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						},
+						new Ilce
+						{
+							Name="Bakırköy",
+							ShortDescription="Kiza yazi",
+							LongDescription="uzun yazi",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+
+						}
+
+					};
+					ilceler = new Dictionary<string, Ilce>();
+					foreach (Ilce genre in genersList)
+					{
+						ilceler.Add(genre.Name, genre);
+					}
+				}
+				return ilceler;
 			}
 		}
 	}
