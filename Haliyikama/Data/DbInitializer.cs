@@ -94,6 +94,13 @@ namespace Haliyikama.Data.Models
 				context.Hakkimizda.AddRange(Hakkimizda.Select(c => c.Value));
 			}
 
+			// Fiya Listesi
+			if (!context.FiyatListesi.Any())
+			{
+				context.FiyatListesi.AddRange(FiyatListesi.Select(c => c.Value));
+			}
+			
+
 		 context.SaveChanges();  
 			
 		}
@@ -253,6 +260,42 @@ namespace Haliyikama.Data.Models
 					}
 				}
 				return hakkimizda;
+			}
+		}
+
+		//FIYATLISTESI
+		public static Dictionary<string, FiyatListesi> fiyatListesi;
+		public static Dictionary<string, FiyatListesi> FiyatListesi
+		{
+			get
+			{
+				if(fiyatListesi == null)
+				{
+					var generList = new FiyatListesi[]
+					{
+						new FiyatListesi
+						{
+							Name="HaliYikama",
+							Price="10"
+						},
+						new FiyatListesi
+						{
+							Name="StepHali Yikama",
+							Price="4"
+						},
+						new FiyatListesi
+						{
+							Name="Koltuk Yikama",
+							Price ="15"
+						}
+					};
+					fiyatListesi = new Dictionary<string, FiyatListesi>();
+					foreach(FiyatListesi gener in generList)
+					{
+						fiyatListesi.Add(gener.Name, gener);
+					}
+				}
+				return fiyatListesi;
 			}
 		}
 

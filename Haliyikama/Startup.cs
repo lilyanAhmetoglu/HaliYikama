@@ -42,6 +42,7 @@ namespace Haliyikama
 			services.AddTransient<IIlce, IlceRepository>();
 			services.AddTransient<ISemt, SemtRepository>();
 			services.AddTransient<IHakkimizda, HakkimizdaRepository>();
+			services.AddTransient<IFiyatListesi , FiyatListesiRepository>();
 
 			//services.AddSpaStaticFiles;
 			services.AddMvc();

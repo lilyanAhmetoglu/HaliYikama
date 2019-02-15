@@ -1,4 +1,5 @@
-﻿<div class="container-fluid Banner-Backgroun">
+﻿@using Haliyikama.ViewModels
+<div class="container-fluid Banner-Backgroun">
 	<div class="container">
 		<div class="jumbotron">
 			<h1>FİYAT LİSTESİ</h1>
@@ -19,34 +20,29 @@
 	<div class="container">
 		<div class="table-responsive">
 			<table class="table">
-				
+
 				<thead>
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Tip</th>
 						<th scope="col">Fiyat</th>
-						
+
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>Mark</td>
-						<td>12</td>
-						
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>Jacob</td>
-						<td>10</td>
-						
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>Larry</td>
-						<td>5</td>
-					
-					</tr>
+					@{
+						foreach (var fiyat in Model.Fiyatlar)
+						{
+
+							<tr>
+								<th scope="row">@fiyat.FiyatId</th>
+								<td>@fiyat.Name</td>
+								<td>@fiyat.Price</td>
+
+							</tr>
+						}
+
+					}
 				</tbody>
 			</table>
 		</div>
