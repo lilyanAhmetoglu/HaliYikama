@@ -43,6 +43,7 @@ namespace Haliyikama
 			services.AddTransient<ISemt, SemtRepository>();
 			services.AddTransient<IHakkimizda, HakkimizdaRepository>();
 			services.AddTransient<IFiyatListesi , FiyatListesiRepository>();
+			services.AddTransient<IBlog, BlogRepository>();
 
 			//services.AddSpaStaticFiles;
 			services.AddMvc();

@@ -12,5 +12,6 @@ namespace Haliyikama.Data.Models
 		public string ShortDescription { get; set; }
 		public string LongDescription { get; set; }
 		public string ImageURL { get; set; }
+		public DateTime DateOfPublish { get; set; }
 	}
 }

@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Haliyikama.Data.interfaces
+namespace Haliyikama.ViewModels
 {
-	public interface IBlog
+	public class BlogListViewModel
 	{
-		IEnumerable<Blog> Blogler { get; }
-		Blog getBlogById(int id);
+		public IEnumerable<Blog> Blogler { get; set; }
 	}
 }

@@ -99,7 +99,12 @@ namespace Haliyikama.Data.Models
 			{
 				context.FiyatListesi.AddRange(FiyatListesi.Select(c => c.Value));
 			}
-			
+
+			//Faydali Bilgiler
+			if (!context.Blog.Any())
+			{
+				context.Blog.AddRange(Blog.Select(c => c.Value));
+			}
 
 		 context.SaveChanges();  
 			
@@ -266,8 +271,8 @@ namespace Haliyikama.Data.Models
 		//FIYATLISTESI
 		public static Dictionary<string, FiyatListesi> fiyatListesi;
 		public static Dictionary<string, FiyatListesi> FiyatListesi
-		{
-			get
+		
+		{	get
 			{
 				if(fiyatListesi == null)
 				{
@@ -296,6 +301,43 @@ namespace Haliyikama.Data.Models
 					}
 				}
 				return fiyatListesi;
+			}
+		}
+
+		//FAYDALIBILGILER
+		public static Dictionary<string, Blog> blog;
+		public static Dictionary<string, Blog> Blog
+		{
+			get
+			{
+				if(blog == null)
+				{
+					var generList = new Blog[]
+					{
+						new Blog
+						{
+							Name = "Blog1",
+							ShortDescription ="Kisa yazi Burda ",
+							LongDescription ="uzun yazi burda",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg",
+							DateOfPublish = DateTime.Now
+						},
+						new Blog
+						{
+							Name = "Blog2",
+							ShortDescription ="Kisa yazi Burda ",
+							LongDescription ="uzun yazi burda",
+							ImageURL="http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg",
+							DateOfPublish = DateTime.Now
+						}
+					};
+					blog = new Dictionary<string, Blog>();
+					foreach (Blog gener in generList)
+					{
+						blog.Add(gener.Name, gener);
+					}
+				}
+				return blog;
 			}
 		}
 
