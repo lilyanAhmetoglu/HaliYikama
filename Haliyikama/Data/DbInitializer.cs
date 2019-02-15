@@ -15,12 +15,12 @@ namespace Haliyikama.Data.Models
 		public static void Seed(AppDbContext context)
 		{
 			
-				
-				if (!context.Hizmetler.Any())
+				//Hizmet - AltHizmet
+		    if (!context.Hizmetler.Any())
 				{
 					context.Hizmetler.AddRange(Hizmetler.Select(c => c.Value));
 				}
-				if (!context.AltHizmetler.Any())
+			if (!context.AltHizmetler.Any())
 				{
 					context.AddRange
 					(
@@ -85,11 +85,19 @@ namespace Haliyikama.Data.Models
 					}
 					);
 			}
-			context.SaveChanges();
+			
 
-			   
+
+			//Hakkimizda
+			if (!context.Hakkimizda.Any())
+			{
+				context.Hakkimizda.AddRange(Hakkimizda.Select(c => c.Value));
+			}
+
+		 context.SaveChanges();  
 			
 		}
+		//HIZMETLER - ALTHIZMETLER
 		private static Dictionary<string, Hizmet> hizmetler;
 		public static Dictionary<string, Hizmet> Hizmetler
 		{
@@ -150,6 +158,7 @@ namespace Haliyikama.Data.Models
 			}
 		}
 
+		// ILCELER - SEMTLER
 		private static Dictionary<string, Ilce> ilceler;
 		public static Dictionary<string, Ilce> Ilceler
 		{
@@ -218,5 +227,34 @@ namespace Haliyikama.Data.Models
 				return ilceler;
 			}
 		}
+
+		// HAKKIMIZDA
+
+		public static Dictionary<string, Hakkimizda> hakkimizda;
+		public static Dictionary<string, Hakkimizda> Hakkimizda
+		{
+			get
+			{
+				if(hakkimizda == null)
+				{
+					var genersList = new Hakkimizda[]
+					{
+						new Hakkimizda
+						{
+							Title="Artirex",
+							Description = "Artirex, temsil ettiği firmalara, internet konulu kurumsal çözüm ve danışmanlık hizmetleri vermek için kurulmuştur. Kuruluş yılı 2014’den günümüze dek iş ortaklarının güveni ve sadakatine yön vermek, vazgeçilmez bir çözüm ortağı olmak, web tasarım işinde bir numara olmak için; yenilikçi, yüksek kaliteli, profesyonel hizmetler vermektedir.",
+							ImageURL = "http://orig11.deviantart.net/6356/f/2010/156/e/f/swallowed_by_nature_by_danutza88.jpg"
+						}
+					};
+					hakkimizda = new Dictionary<string, Hakkimizda>();
+					foreach (Hakkimizda gener in genersList)
+					{
+						hakkimizda.Add(gener.Title, gener);
+					}
+				}
+				return hakkimizda;
+			}
+		}
+
 	}
 }

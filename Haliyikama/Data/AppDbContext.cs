@@ -17,5 +17,6 @@ namespace Haliyikama.Data
 		public DbSet<AltHizmet> AltHizmetler { get; set; }
 		public DbSet<Ilce> Ilceler { get; set; }
 		public DbSet<Semt> Semtler { get; set; }
+		public DbSet<Hakkimizda> Hakkimizda { get; set; }
  	}
 }
