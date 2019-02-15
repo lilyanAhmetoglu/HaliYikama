@@ -15,6 +15,7 @@ namespace Haliyikama.Data.Models
 		public int NewPrice { get; set; }
 		public string ImageUrl { get; set; }
 		public bool IsDiscounted { get; set; }
+		public string URL { get; set; }
 		public List<AltHizmet> AltHizmetler { get; set; }
 	}
 }
