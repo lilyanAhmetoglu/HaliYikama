@@ -45,6 +45,7 @@ namespace Haliyikama
 			services.AddTransient<IFiyatListesi , FiyatListesiRepository>();
 			services.AddTransient<IBlog, BlogRepository>();
 			services.AddTransient<IIletisim, IletisimRepository>();
+			services.AddTransient<ICarousel, CarouselRepository>();
 
 			//services.AddSpaStaticFiles;
 			services.AddMvc();

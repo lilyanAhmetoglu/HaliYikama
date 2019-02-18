@@ -21,6 +21,6 @@ namespace Haliyikama.Data
 		public DbSet<FiyatListesi> FiyatListesi { get; set; }
 		public DbSet<Blog> Blog { get; set; }
 		public DbSet<Iletisim> Iletisim { get; set; }
-
- 	}
+		public DbSet<Carousel> Carouseller { get; set; }
+	}
 }

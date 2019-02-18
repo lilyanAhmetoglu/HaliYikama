@@ -106,13 +106,20 @@ namespace Haliyikama.Data.Models
 				context.Blog.AddRange(Blog.Select(c => c.Value));
 			}
 
+			//Carousel
+			if (!context.Carouseller.Any())
+			{
+				context.Carouseller.AddRange(Carouseller.Select(c => c.Value));
+			}
 			//Iletisim
 			if (!context.Iletisim.Any())
 			{
 				context.Iletisim.AddRange(Iletisim.Select(c => c.Value));
 			}
 
-		 context.SaveChanges();  
+			
+
+			context.SaveChanges();  
 			
 		}
 		//HIZMETLER - ALTHIZMETLER
@@ -375,6 +382,33 @@ namespace Haliyikama.Data.Models
 
 				}
 				return iletisim;
+			}
+		}
+
+		//ILETISIM
+		public static Dictionary<string, Carousel> carousel;
+		public static Dictionary<string, Carousel> Carouseller
+		{
+			get
+			{
+				if (carousel == null)
+				{
+					var generList = new Carousel[]
+					{
+						 new Carousel
+						{
+							 ImageUrl ="/Images/3.jpg"
+						}
+					
+					};
+					carousel = new Dictionary<string, Carousel>();
+					foreach (Carousel gener in generList)
+					{
+						carousel.Add(gener.ImageUrl, gener);
+					}
+
+				}
+				return carousel;
 			}
 		}
 
