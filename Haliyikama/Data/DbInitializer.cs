@@ -106,6 +106,12 @@ namespace Haliyikama.Data.Models
 				context.Blog.AddRange(Blog.Select(c => c.Value));
 			}
 
+			//Iletisim
+			if (!context.Iletisim.Any())
+			{
+				context.Iletisim.AddRange(Iletisim.Select(c => c.Value));
+			}
+
 		 context.SaveChanges();  
 			
 		}
@@ -338,6 +344,37 @@ namespace Haliyikama.Data.Models
 					}
 				}
 				return blog;
+			}
+		}
+
+		//ILETISIM
+		public static Dictionary<string, Iletisim> iletisim;
+		public static Dictionary<string, Iletisim> Iletisim
+		{
+			get
+			{
+				if (iletisim == null)
+				{
+					var generList = new Iletisim[]
+					{
+						 new Iletisim
+						{
+						Address = " Adres Burda",
+						Email = " E posta Burda",
+						Phone1 = "cep telefon burda",
+						Phone2 = "cep telefon2 burda",
+						ShortDescription = "kisa yazi burda",
+						MapLink = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.1435118487834!2d73.09695287259558!3d23.742261243014283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395d97dd1a0a0f73%3A0x1c89ba6d8d4d240!2sBolundra%2C+Gujarat+383421!5e0!3m2!1sen!2sin!4v1500617103857"
+						}
+					};
+					iletisim = new Dictionary<string, Iletisim>();
+					foreach (Iletisim gener in generList)
+					{
+						iletisim.Add(gener.Address, gener);
+					}
+
+				}
+				return iletisim;
 			}
 		}
 
