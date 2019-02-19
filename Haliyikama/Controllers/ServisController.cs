@@ -24,5 +24,11 @@ namespace Haliyikama.Controllers
 			IlceVM.Ilceler = _ilce.Ilceler;
             return View(IlceVM);
         }
-    }
+		public ViewResult Details()
+		{
+		
+			return View();
+
+		}
+	}
 }
