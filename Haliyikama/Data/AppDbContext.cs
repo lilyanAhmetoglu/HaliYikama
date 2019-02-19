@@ -22,5 +22,6 @@ namespace Haliyikama.Data
 		public DbSet<Blog> Blog { get; set; }
 		public DbSet<Iletisim> Iletisim { get; set; }
 		public DbSet<Carousel> Carouseller { get; set; }
+		public DbSet<Referens> Referensler { get; set; }
 	}
 }

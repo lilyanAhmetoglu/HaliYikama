@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Haliyikama.ViewModels
 {
-	public class HomeViewModel
+	public class ReferenseViewModel
 	{
-		public IEnumerable<Carousel> Carouseller { get; set; }
 		public IEnumerable<Referens> Referensler { get; set; }
 	}
 }

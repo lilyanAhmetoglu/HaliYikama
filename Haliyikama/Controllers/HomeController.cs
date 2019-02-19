@@ -11,9 +11,12 @@ namespace Haliyikama.Controllers
     public class HomeController : Controller
     {
 		private readonly ICarousel _carousel;
-		public HomeController(ICarousel carousel)
+		private readonly IReferens _referens;
+
+		public HomeController(ICarousel carousel , IReferens referens)
 		{
 			_carousel = carousel;
+			_referens = referens;
 		}
 
 
@@ -21,7 +24,9 @@ namespace Haliyikama.Controllers
         {
 			var homeViewModel = new HomeViewModel
 			{
-				Carouseller = _carousel.Carouseller
+				Carouseller = _carousel.Carouseller,
+				Referensler = _referens.Referensler
+			 
 			};
             return View(homeViewModel);
         }

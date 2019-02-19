@@ -111,13 +111,20 @@ namespace Haliyikama.Data.Models
 			{
 				context.Carouseller.AddRange(Carouseller.Select(c => c.Value));
 			}
+
 			//Iletisim
 			if (!context.Iletisim.Any())
 			{
 				context.Iletisim.AddRange(Iletisim.Select(c => c.Value));
 			}
 
-			
+			//Referensler
+			if (!context.Referensler.Any())
+			{
+				context.Referensler.AddRange(Referensler.Select(c => c.Value));
+			}
+
+
 
 			context.SaveChanges();  
 			
@@ -411,6 +418,44 @@ namespace Haliyikama.Data.Models
 				return carousel;
 			}
 		}
+
+		//REFERENSLER
+		public static Dictionary<string, Referens> referensler;
+		public static Dictionary<string, Referens> Referensler
+		{
+			get
+			{
+				if (referensler == null)
+				{
+					var generList = new Referens[]
+					{
+						 new Referens
+						{
+							Name ="Beyan",
+							ImageURL ="http://www.reactiongifs.com/r/overbite.gif",
+							Position ="Web Developer",
+							Text ="I Love This Company it is great one"
+						},
+						  new Referens
+						{
+							Name ="Lylian",
+							ImageURL ="http://www.reactiongifs.com/r/overbite.gif",
+							Position ="HR",
+							Text ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris"
+						}
+
+					};
+					referensler = new Dictionary<string, Referens>();
+					foreach (Referens gener in generList)
+					{
+						referensler.Add(gener.Name, gener);
+					}
+
+				}
+				return referensler;
+			}
+		}
+
 
 	}
 }
