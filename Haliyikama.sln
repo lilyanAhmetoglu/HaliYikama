@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Haliyikama", "Haliyikama\Haliyikama.csproj", "{D1836146-362C-43D2-B6CF-CAFC27B54707}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaliYikamaWebAPI", "HaliYikamaWebAPI\HaliYikamaWebAPI.csproj", "{F44E95D9-F2AB-4832-950C-0CC38A20447C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D1836146-362C-43D2-B6CF-CAFC27B54707}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1836146-362C-43D2-B6CF-CAFC27B54707}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1836146-362C-43D2-B6CF-CAFC27B54707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44E95D9-F2AB-4832-950C-0CC38A20447C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44E95D9-F2AB-4832-950C-0CC38A20447C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44E95D9-F2AB-4832-950C-0CC38A20447C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44E95D9-F2AB-4832-950C-0CC38A20447C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
