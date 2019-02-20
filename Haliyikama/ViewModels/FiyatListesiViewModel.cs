@@ -9,5 +9,6 @@ namespace Haliyikama.ViewModels
 	public class FiyatListesiViewModel
 	{
 		public IEnumerable<FiyatListesi> Fiyatlar { get; set; }
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

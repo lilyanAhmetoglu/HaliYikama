@@ -9,5 +9,6 @@ namespace Haliyikama.ViewModels
 	public class HakkimizdaViewModel
 	{
 		public IEnumerable<Hakkimizda> Hakkimizda { get; set; }
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

@@ -9,5 +9,6 @@ namespace Haliyikama.ViewModels
 	public class AltHizmetListViewModel
 	{
 		public IEnumerable<AltHizmet> AlHizmetler { get; set; }
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

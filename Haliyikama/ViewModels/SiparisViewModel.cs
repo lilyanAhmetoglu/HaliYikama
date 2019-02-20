@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Haliyikama.ViewModels
 {
-	public class BlogListViewModel
+	public class SiparisViewModel
 	{
-		public IEnumerable<Blog> Blogler { get; set; }
 		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

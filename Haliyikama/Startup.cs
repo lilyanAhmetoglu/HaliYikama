@@ -70,7 +70,13 @@ namespace Haliyikama
 			app.UseDeveloperExceptionPage();
 			app.UseStatusCodePages();
 			app.UseStaticFiles();
-			app.UseMvcWithDefaultRoute();
+			//app.UseMvcWithDefaultRoute();
+			app.UseMvc(
+				 routes =>
+				 {
+					 routes.MapRoute("default", "{controller=Home}/{action=Index}");
+				 }
+				);
 			
 			
 			

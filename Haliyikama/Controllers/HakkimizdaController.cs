@@ -12,15 +12,21 @@ namespace Haliyikama.Controllers
     public class HakkimizdaController : Controller
     {
 		private readonly IHakkimizda _hakkimizda;
-        public HakkimizdaController(IHakkimizda hakkimizda)
+		private readonly IAyarlar _ayarlar;
+
+		public HakkimizdaController(IHakkimizda hakkimizda, IAyarlar ayarlar)
 		{
 			_hakkimizda = hakkimizda;
+			_ayarlar = ayarlar;
 		}
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-			HakkimizdaViewModel HakkimizdaVM = new HakkimizdaViewModel();
-			HakkimizdaVM.Hakkimizda = _hakkimizda.Hakkimizda;
+			var HakkimizdaVM = new HakkimizdaViewModel {
+				Hakkimizda = _hakkimizda.Hakkimizda,
+				Ayarlar = _ayarlar.ayarlar
+			};
+			
             return View(HakkimizdaVM);
         }
     }

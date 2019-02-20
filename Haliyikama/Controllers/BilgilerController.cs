@@ -11,14 +11,21 @@ namespace Haliyikama.Controllers
     public class BilgilerController : Controller
     {
 		private readonly IBlog _blog;
-		public BilgilerController(IBlog blog)
+		private readonly IAyarlar _ayarlar;
+		public BilgilerController(IBlog blog , IAyarlar ayarlar)
 		{
 			_blog = blog;
+			_ayarlar = ayarlar;
 		}
-		public IActionResult Index()
+		public ViewResult Index()
         {
-			BlogListViewModel BlogVM = new BlogListViewModel();
-			BlogVM.Blogler = _blog.Blogler;
+			var BlogVM = new BlogListViewModel
+			{
+				Blogler = _blog.Blogler,
+				Ayarlar = _ayarlar.ayarlar
+
+		  };
+			
 
 			return View(BlogVM);
 		}

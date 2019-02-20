@@ -11,15 +11,22 @@ namespace Haliyikama.Controllers
     public class IletisimController : Controller
     {
 		private readonly IIletisim _iletisim;
-		public IletisimController(IIletisim iletisim)
+		private readonly IAyarlar _ayarlar;
+
+		public IletisimController(IIletisim iletisim, IAyarlar ayarlar)
 		{
 			_iletisim = iletisim;
+			_ayarlar = ayarlar;
 		}
-		public IActionResult Index()
+		public ViewResult Index()
         {
+
+			var IletisimVM = new IletisimViewModel {
+				iletisim = _iletisim.iletisim,
+				Ayarlar = _ayarlar.ayarlar
+
+			};
 			
-			IletisimViewModel IletisimVM = new IletisimViewModel();
-			IletisimVM.iletisim = _iletisim.iletisim;
             return View(IletisimVM);
         }
     }

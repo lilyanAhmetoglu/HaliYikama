@@ -9,5 +9,6 @@ namespace Haliyikama.ViewModels
 	public class IletisimViewModel
 	{
 		public IEnumerable<Iletisim> iletisim { get; set; }
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

@@ -9,6 +9,7 @@ namespace Haliyikama.ViewModels
 	public class HizmetListViewModel
 	{
 		public IEnumerable<Hizmet> Hizmetler{ get; set; }
-		
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
+
 	}
 }

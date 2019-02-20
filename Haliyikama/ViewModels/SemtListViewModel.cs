@@ -9,5 +9,6 @@ namespace Haliyikama.ViewModels
 	public class SemtListViewModel
 	{
 		public IEnumerable<Semt> Semtler { get; set; }
+		public IEnumerable<Ayarlar> Ayarlar { get; set; }
 	}
 }

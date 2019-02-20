@@ -11,18 +11,25 @@ namespace Haliyikama.Controllers
 	public class HizmetController : Controller
 	{
 		private readonly IHizmet _hizmet;
+		private readonly IAyarlar _ayarlar;
 		private readonly IAltHizmet _altHizmet;
 
-		public HizmetController(IHizmet hizmet , IAltHizmet altHizmet)
+		public HizmetController(IHizmet hizmet , IAltHizmet altHizmet, IAyarlar ayarlar)
 		{
 			_hizmet = hizmet;
 			_altHizmet = altHizmet;
+			_ayarlar = ayarlar;
 		}
 		public ViewResult List()
 		{
-		//	var hizmetler = _hizmet.Hizmetler;
-			HizmetListViewModel HizmetVM = new HizmetListViewModel();
-			HizmetVM.Hizmetler = _hizmet.Hizmetler;
+			//	var hizmetler = _hizmet.Hizmetler;
+			var HizmetVM = new HizmetListViewModel {
+				Hizmetler = _hizmet.Hizmetler ,
+			    Ayarlar = _ayarlar.ayarlar
+
+
+			  };
+			
 
 			return View(HizmetVM);
 

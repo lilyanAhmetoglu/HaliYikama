@@ -12,18 +12,28 @@ namespace Haliyikama.Controllers
     {
 		private readonly IIlce _ilce;
 		private readonly ISemt _semt;
-		public ServisController(IIlce ilce , ISemt semt )
+		private readonly IAyarlar _ayarlar;
+
+
+		public ServisController(IIlce ilce , ISemt semt, IAyarlar ayarlar)
 		{
 			_ilce = ilce;
 			_semt = semt;
+			_ayarlar = ayarlar;
 
 		}
-        public IActionResult Index()
+        public ViewResult Index()
         {
-			IlceListViewModel IlceVM = new IlceListViewModel();
-			IlceVM.Ilceler = _ilce.Ilceler;
+			var IlceVM = new IlceListViewModel {
+				Ilceler = _ilce.Ilceler,
+				Ayarlar =_ayarlar.ayarlar
+
+			};
+			
             return View(IlceVM);
         }
+
+
 		public ViewResult Details()
 		{
 		

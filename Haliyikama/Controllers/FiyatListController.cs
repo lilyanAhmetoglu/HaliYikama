@@ -11,14 +11,22 @@ namespace Haliyikama.Controllers
     public class FiyatListController : Controller
     {
 		private readonly IFiyatListesi _fiyatListesi;
-		public FiyatListController(IFiyatListesi fiyatListesi)
+		private readonly IAyarlar _ayarlar;
+
+
+		public FiyatListController(IFiyatListesi fiyatListesi, IAyarlar ayarlar)
 		{
 			_fiyatListesi = fiyatListesi;
+			_ayarlar = ayarlar;
 		}
-		public IActionResult Index()
+		public ViewResult Index()
         {
-			FiyatListesiViewModel FiyatVM = new FiyatListesiViewModel();
-			FiyatVM.Fiyatlar = _fiyatListesi.Fiyatlar;
+			var FiyatVM = new FiyatListesiViewModel {
+
+				Fiyatlar = _fiyatListesi.Fiyatlar,
+				Ayarlar = _ayarlar.ayarlar
+		};
+			
 
 			return View(FiyatVM);
 		}
