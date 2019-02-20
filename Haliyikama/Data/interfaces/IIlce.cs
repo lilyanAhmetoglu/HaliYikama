@@ -10,5 +10,6 @@ namespace Haliyikama.Data.interfaces
 	{
 		IEnumerable<Ilce> Ilceler { get;  }
 		Ilce getIlceById(int id);
+		List<Semt> getSemtByIlceID(int id);
 	}
 }

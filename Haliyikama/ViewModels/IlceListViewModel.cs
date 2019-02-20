@@ -10,5 +10,7 @@ namespace Haliyikama.ViewModels
 	{
 		public IEnumerable<Ilce> Ilceler { get; set; }
 		public IEnumerable<Ayarlar> Ayarlar { get; set; }
+		public Ilce ilce { get; set; }
+		public List<Semt> Semtler { get; set; }
 	}
 }

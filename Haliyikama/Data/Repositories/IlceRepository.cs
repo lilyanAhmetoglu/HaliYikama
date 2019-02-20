@@ -15,7 +15,7 @@ namespace Haliyikama.Data.Repositories
 			_appDbContext = appDbContext;
 		}
 		public IEnumerable<Ilce> Ilceler => _appDbContext.Ilceler;
-
+		public List<Semt>  getSemtByIlceID(int id) => _appDbContext.Semtler.Where(p => p.Ilce.IlceId == id).ToList();
 		public Ilce getIlceById(int id) => _appDbContext.Ilceler.FirstOrDefault(p => p.IlceId == id);
 	}
 }

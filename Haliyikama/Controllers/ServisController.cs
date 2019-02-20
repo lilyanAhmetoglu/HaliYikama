@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Haliyikama.Data.interfaces;
+using Haliyikama.Data.Models;
 using Haliyikama.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +14,7 @@ namespace Haliyikama.Controllers
 		private readonly IIlce _ilce;
 		private readonly ISemt _semt;
 		private readonly IAyarlar _ayarlar;
-
+		
 
 		public ServisController(IIlce ilce , ISemt semt, IAyarlar ayarlar)
 		{
@@ -34,10 +35,15 @@ namespace Haliyikama.Controllers
         }
 
 
-		public ViewResult Details()
+		public ViewResult Details(int id)
 		{
-		
-			return View();
+			var IlceVM = new IlceListViewModel {
+
+				Semtler =_ilce.getSemtByIlceID(id),
+				ilce = _ilce.getIlceById(id),	
+				Ayarlar = _ayarlar.ayarlar
+			};
+			return View(IlceVM);
 
 		}
 	}

@@ -1,8 +1,18 @@
-﻿<div class="container-fluid Banner-Backgroun">
+﻿@using Haliyikama.ViewModels
+@using Haliyikama.Data.Models
+
+@{
+
+
+	var ilce = Model.ilce;
+	
+
+}
+<div class="container-fluid Banner-Backgroun">
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Içerik</h1>
-			<p>Değerli Arnavutköy sakinleri, yaşam alanlarınızda bulunan her cins ve her ebattaki halıların temizleme </p>
+			<h1>@ilce.Name</h1>
+			<p>@ilce.ShortDescription </p>
 
 		</div>
 		<div class="row">
@@ -10,7 +20,7 @@
 			<ul class="breadcrumb">
 				<li><a href="/">Home</a></li>
 				<li><a href="/servis">Servisler</a></li>
-				<li class="active">Detail</li>
+				<li class="active">@ilce.Name</li>
 			</ul>
 		</div>
 	</div>
@@ -21,56 +31,21 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-9 col-md-9">
-				<h4 class="text-left">Avcılar Halı Yıkama</h4>
-				<hr />
-				<p></p>
-				<h1>Avcılar Halı Yıkama</h1>
-				<p>
-					Avcılar Halı Yıkama,<strong>Halı Temizleme</strong>k emek ister bazı lekeler oldukça inatçıdır şimdi Step <strong>halı </strong> merkezi sayesinde halılarınızdaki inatçı lekelere savaş açıyoruz. En son teknolojiye sahip olan firmamıza teslim ettiğiniz halılarınız bu dakikadan sonra garanti kapsamına alınacaktır. İstanbul avcılar' da oturan tüm bayanlar halılarınızın uzun ömürlü ve <strong>vakumlama sistemi</strong> ile yıkanmasını istiyorsanız o zaman <strong>444 91 08</strong> numaralı müşteri destek hattımızdan bize ulaşmalısınız.
-				</p>
-				<p>
-					Biliyorsunuz ki ufak lekeler zaman içerisinde halı içinde bir yer eder ve bu sayede oraya yerleşir eğer ki vakumlama işlemini yaptırmazsanız o zaman da bu lekeler başınıza daha büyük lekeler olarak iş çıkarabilir. İşte bu gibi sorunlarla karşı karşıya kalmamak için Step halı sizleri bekliyor.
-				</p>
-				<p>
-					Online sipariş için tıklayınız.
-				</p>
-				<h2>Avcılar Halı Yıkama</h2>
-				<p>
-					Halı yıkama hizmeti satın almak istediğinizde düzenli olarak çalıştığınız bir firma yoksa çok fazla tereddüt içerisinde kalabilirsiniz. Çünkü teslim ettiğiniz halıların bırakın temizlenmesini, halılarınıza zarar gelme ihtimali bile vardır. Bunun kötü örneklerini daha önce yaşamış ya da çevrenizden duymuş olabilirsiniz. Bu nedenle Avcılar bölgesinde bir halı yıkama şirketi ile anlaşmadan,<strong><u><i>Avcılar halı yıkama </i></u></strong>hizmeti almadan önce mutlaka birlikçe çalışacağınız firmayı yoğun bir şekilde araştırmanız gerekir. Bu araştırmayı yapmadan herhangi bir firmayı tercih ederseniz, halılarınızı emanet ettiğiniz firma ile büyük problemler yaşayabilirsiniz. Firmamız bu noktada sizleri karşılıyor ve sizlere sorunsuz bir <b><u><i>Avcılar halı yıkama  </i></u></b> hizmeti veriyor. Hiçbir şekilde sorun yaşamayacağınız bu hizmetleri aldığınız takdirde, halılarınızı hızlı bir şekilde teslim alıyoruz. Aldığımız halıları, kendi halılarımız gibi, uzman bir ekiple birlikte özenle yıkıyoruz. Üstelik bu aşamaların tamamında ve <b><u><i>Avcılar halı yıkama</i></u></b>hizmetlerimizde sizlere kurumsal yapımızı güvence olarak gösteriyoruz. Senelerdir bu alanda faaliyet gösteren firmamız, sektörün Avcılar'daki önemli isimlerinden bir tanesidir ve Avcılar'da bugüne kadar sayısız halı teslim almış, yıkamış ve sahiplerine teslim etmiştir. Bizimle çalışarak halılarınızın hızlı ve temiz bir şekilde yıkanmasını sağlayabilirsiniz.
-				</p>
-				<hr />
-				<h2>Avcılar Profesyonel Halı Yıkama Hizmetleri</h2>
-				<p>
-					Avcılar'da aradığınız halı yıkama şirketi olan firmamız, bu hizmetleri için size bir avantaj daha sunacak. Bu avantaj da uygun fiyat avantajı… Sizlere garantisini verdiğimiz uygun fiyat politikamız sayesinde bizimle çalışarak hem maddi yönden rahat edeceksiniz, hem de manevi yönden huzurla halılarınızı yıkatmış olacaksınız. İstanbul'un en önemli yerleşim yerlerinden bir tanesi olan bu önemli ilçede, Avcılar'da, profesyonel bir halı yıkama hizmeti satın almak mümkün…<b><u><i> Avcılar halı yıkama </i></u></b>  ile bu hizmetlerimizi siz değerli müşterilerimize iletiyoruz. Kapınızda aldığımız halılarınızı en güzel şekilde yıkayıp tekrar kapınıza teslim ederek, zahmetsiz bir şekilde halılarınızın yıkanmasını sağlıyoruz. Bildiğiniz üzere halı yıkama işi, elle yapıldığı takdirde dünyanın en zor işlerinden bir tanesidir. Bu zor işi profesyonel koşullarda yapınca, hem işin zorluğu ortadan kalkıyor, hem yıkanan halılar en az birkaç kat daha temiz oluyor, hem de harcanan suyun boyutu küçültülüyor. Bu sayede profesyonel hizmetler ile her yönden kâr etmek mümkün oluyor.<b><u><i>Avcılar halı yıkama </i></u></b>  hizmetlerimiz ile Avcılar'da alabileceğiniz en iyi halı yıkama hizmetini almış olacaksınız. Firmamız halılarınız için profesyonel ve ileri kaliteli tesisler oluşturmuştur. Bu tesislerde teslim alınan halılarınız, yine ileri teknolojiler kullanılarak yıkanır. Firmamız her zaman teknolojik gelişmeleri işlerine yansıtır ve sürekli gelişim gösteren teknolojiden faaliyetlerini sürdürmek için her zaman yararlanır.
-				</p>
-				<hr />
-				<h2>Teknolojinin Sunduğu İmkanlarlaTertemiz Halılar…</h2>
-				<p>
-					Siz değerli müşterilerimize teknolojinin sunduğu imkanlarla tertemiz halılar vadeden firmamız,<b><u><i>Avcılar halı yıkama</i></u></b>  hizmetleri kapsamında, halılarınızı olabileceği en temiz hale getiriyor. Halınızın temizlenmesini ve temiz olmasını değil, çok temiz olmasını istiyorsanız, halınız ileri seviye tesislerimizde istediğiniz hale getirilecek. Halınızın iki farklı halini, vermeden önceki halini ve verdikten sonraki halini görünce aradaki farkı açık bir şekilde anlayacaksınız. Ayrıca bize teslim ettiğiniz halılar her zaman güvence altındadır. Emanet aldığımız halıları sigorta kapsamında değerlendirir ve koruruz.<b><u><i> Avcılar halı yıkama</i></u></b> hizmetlerimizde halılarınızın başına kesinlikle istenmeyen şeyler gelmez. Firmamızın her çalışanı ayrı ayrı halılarınızın korunması ve sağlıklı bir şekilde taşınması için gerekli tedbirleri alır. Alınan bu tedbirler sayesinde halınız her zaman güvenli bir şekilde firmamıza doğru hareket eder, yıkanır ve tekrar geri, evinize doğru hareket ederek size teslim edilir. Step Halı Yıkama'ya <b>444 91 08 </b> numaralı telefondan ulaşabilirsiniz.
-				</p>
+				
+				<p>@ilce.LongDescription </p>
+				
 			</div>
 			<div class="col-xs-12 col-sm-3 col-md-3">
 				<div class="single category" style="text-align:center">
 					<h3 class="side-title">Semtler</h3>
-					<ul class="list-unstyled" >
-						<li><a href="#">Ataşehir</a></li>
-						<li><a href="#">Beykoz</a></li>
-						<li><a href="#">Çekmeköy</a></li>
-						<li><a href="#">Kadıköy</a></li>
-						<li><a href="#">Maltepe</a></li>
-						<li><a href="#">Kartal</a></li>
-						<li><a href="#">Ümraniye</a></li>
-						<li><a href="#">Üsküdar</a></li>
-						<li><a href="#">Beyoğlu</a></li>
-						<li><a href="#">Başakşehir</a></li>
-						<li><a href="#">Bakırköy</a></li>
-						<li><a href="#">Sefaköy</a></li>
-						<li><a href="#">Esenler</a></li>
-						<li><a href="#">Esenyurt</a></li>
-						<li><a href="#">Güngören</a></li>
-						<li><a href="#">Çatalca</a></li>
-						<li><a href="#">Eyüp</a></li>
-						<li><a href="#">Fatih</a></li>
+					<ul class="list-unstyled">
+						@foreach (var m in ilce.Semtler)
+						{
+							<li><a href="#">@m.Name</a></li>
+						}
+
+
+
 					</ul>
 				</div>
 			</div>
