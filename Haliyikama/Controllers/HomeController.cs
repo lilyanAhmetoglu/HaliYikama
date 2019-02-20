@@ -13,12 +13,14 @@ namespace Haliyikama.Controllers
 		private readonly ICarousel _carousel;
 		private readonly IReferens _referens;
 		private readonly IHizmet _hizmet;
+		private readonly IAyarlar _ayarlar;
 
-		public HomeController(ICarousel carousel , IReferens referens , IHizmet hizmet)
+		public HomeController(ICarousel carousel , IReferens referens , IHizmet hizmet, IAyarlar ayarlar)
 		{
 			_carousel = carousel;
 			_referens = referens;
 			_hizmet = hizmet;
+			_ayarlar = ayarlar;
 		}
 
 
@@ -28,7 +30,8 @@ namespace Haliyikama.Controllers
 			{
 				Carouseller = _carousel.Carouseller,
 				Referensler = _referens.Referensler,
-				Hizmetler= _hizmet.Hizmetler
+				Hizmetler = _hizmet.Hizmetler,
+				Ayarlar = _ayarlar.ayarlar
 			 
 			};
             return View(homeViewModel);

@@ -1,4 +1,21 @@
-﻿<!DOCTYPE html>
+﻿@using Haliyikama.ViewModels
+@using Haliyikama.Data.Models
+@{
+	var counter = 0;
+	var counter2 = 0;
+
+}
+@{
+
+	var a = ((IEnumerable<Ayarlar>)Model.Ayarlar).Cast<dynamic>();
+
+	var query = (from p in a
+				 where p.Id == 1
+
+				 select p).ToList().First();
+
+}
+<!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width" />
@@ -107,7 +124,7 @@
 					<div class=" col-sm-12 col-xs-6">
 						<div class="text-left">
 							<div class="text-left" id="logo">
-								<a href="/"><img src="https://www.artirex.com/uploads/thumb/logo.png" alt="logo" /></a>
+								<a href="/"><img src="@query.LogoURL" alt="logo" /></a>
 							</div>
 						</div>
 					</div>
@@ -128,7 +145,7 @@
 					<ul class="nav navbar-nav nav-pills" id="nav-center">
 						<li id="nav-center">
 
-							<h1>0212 0212 00 00 </h1>
+							<h1>@query.PhoneNumber1 </h1>
 
 						</li>
 					</ul>
@@ -224,10 +241,10 @@
 					<div class="col-md-2 footer-social animated fadeInDown">
 						<h4>Bize Takip edin</h4>
 						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">RSS</a></li>
+							<li><a href="@query.FacebookURL">Facebook</a></li>
+							<li><a href="@query.TwitteURL">Twitter</a></li>
+							<li><a href="@query.InstagramURL">Instagram</a></li>
+							<li><a href="@query.YoutubeLink">Youtube</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 footer-ns animated fadeInRight">
@@ -249,7 +266,7 @@
 	<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script>
 	<script src='//cdnjs.cloudflare.com/ajax/libs/flickity/1.1.0/flickity.pkgd.min.js'></script>
 	<script>
-	$("#showcase").flickity({
+		$("#showcase").flickity({
 			wrapAround: true,
 			//pageDots: false
 		});

@@ -1,9 +1,20 @@
 ﻿@using Haliyikama.ViewModels
-@{ 
+@using Haliyikama.Data.Models
+@{
 	var counter = 0;
 	var counter2 = 0;
-	var counter3 = 0;
-	}
+
+}
+@{
+
+	var a = ((IEnumerable<Ayarlar>)Model.Ayarlar).Cast<dynamic>();
+
+	var query = (from p in a
+				 where p.Id == 1
+
+				 select p).ToList().First();
+
+}
 <section>
 	<div class="container">
 		<div class="row ">
@@ -12,7 +23,7 @@
 					<div class="text-centerlize">
 						<h1>Halı Yıkama</h1>
 
-						<h1>50%</h1>
+						<h1>@query.DescountedPriceSlider</h1>
 
 						<h1>Indirim</h1>
 					</div>
@@ -27,10 +38,10 @@
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner">
 						@foreach (var carousel in Model.Carouseller)
-								{
-									counter++;
-									<div class="item @(counter==1?"active":"")">
-								   <img src="@carousel.ImageUrl" alt="Los Angeles" style="width:100%;">
+						{
+							counter++;
+							<div class="item @(counter==1?"active":"")">
+								<img src="@carousel.ImageUrl" alt="Los Angeles" style="width:100%;">
 							</div>
 
 
@@ -65,7 +76,7 @@
 
 				<div class="col-md-6 col-sm-12">
 					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/v64KOxKVLVg" allowfullscreen></iframe>
+						<iframe class="embed-responsive-item" src="@query.VideoLink" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
@@ -80,23 +91,23 @@
 						<!-- Carousel Slides / Quotes -->
 						<div class="carousel-inner">
 
-							@foreach(var referens in Model.Referensler)
-									{
-										counter2++;
-							<div class="item @(counter2==1?"active":"")">
-								<blockquote>
-									<div class="row">
-										<div class="col-sm-3 text-center">
-											<img class="img-circle" src="@referens.ImageURL" style="width: 100px;height:100px;">
-											<!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+							@foreach (var referens in Model.Referensler)
+							{
+								counter2++;
+								<div class="item @(counter2==1?"active":"")">
+									<blockquote>
+										<div class="row">
+											<div class="col-sm-3 text-center">
+												<img class="img-circle" src="@referens.ImageURL" style="width: 100px;height:100px;">
+												<!--<img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">-->
+											</div>
+											<div class="col-sm-9">
+												<p>@referens.Text</p>
+												<small>@referens.Name</small>
+											</div>
 										</div>
-										<div class="col-sm-9">
-											<p>@referens.Text</p>
-											<small>@referens.Name</small>
-										</div>
-									</div>
-								</blockquote>
-							</div>
+									</blockquote>
+								</div>
 							}
 						</div>
 
@@ -135,14 +146,14 @@
 									<h3 class="course-title">@hizmet.Name</h3>
 									<div class="course-meta">
 										<time class="course-date">@hizmet.Price</time>
-									
+
 									</div>
 								</div>
 							</div>
 						</div>
 					}
 
-					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -157,7 +168,7 @@
 				<h1 class="float-left">SERVİSLER</h1>
 			</div>
 			<div class="col-sm-6 col-xs-12 s-header">
-				<h1 class="float-right ">0212 0212 00 00</h1>
+				<h1 class="float-right ">@query.PhoneNumber1</h1>
 			</div>
 
 

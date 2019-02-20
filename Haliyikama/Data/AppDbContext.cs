@@ -23,5 +23,6 @@ namespace Haliyikama.Data
 		public DbSet<Iletisim> Iletisim { get; set; }
 		public DbSet<Carousel> Carouseller { get; set; }
 		public DbSet<Referens> Referensler { get; set; }
+		public DbSet<Ayarlar> Ayarlar { get; set; }
 	}
 }

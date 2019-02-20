@@ -124,7 +124,11 @@ namespace Haliyikama.Data.Models
 				context.Referensler.AddRange(Referensler.Select(c => c.Value));
 			}
 
-
+			//Ayarlar
+			if (!context.Ayarlar.Any())
+			{
+				context.Ayarlar.AddRange(Ayarlar.Select(c => c.Value));
+			}
 
 			context.SaveChanges();  
 			
@@ -392,7 +396,7 @@ namespace Haliyikama.Data.Models
 			}
 		}
 
-		//ILETISIM
+		//Slider
 		public static Dictionary<string, Carousel> carousel;
 		public static Dictionary<string, Carousel> Carouseller
 		{
@@ -456,6 +460,42 @@ namespace Haliyikama.Data.Models
 			}
 		}
 
+		//AYARLAR
+		public static Dictionary<string, Ayarlar> ayarlar;
+		public static Dictionary<string, Ayarlar> Ayarlar
+		{
+			get
+			{
+				if (ayarlar == null)
+				{
+					var generList = new Ayarlar[]
+					{
+						 new Ayarlar
+						{
+							 CompanyName="Artirex",
+							 LogoURL="https://www.artirex.com/uploads/thumb/logo.png",
+							 FacebookURL = "www.Facebook.com",
+							 InstagramURL = "instagram.com",
+							 TwitteURL = "twitter.com",
+							 YoutubeLink = "youtube.com",
+							 Address =" Adres Burda",
+							 PhoneNumber1 = "0212 212 00 00",
+							 PhoneNumber2 = "0212 212 00 00",
+							 Email ="info@artirex.com",
+							 DescountedPriceSlider ="40%",
+							 VideoLink="https://www.youtube.com/embed/v64KOxKVLVg"
+						}
 
+					};
+					ayarlar = new Dictionary<string, Ayarlar>();
+					foreach (Ayarlar gener in generList)
+					{
+						ayarlar.Add(gener.CompanyName, gener);
+					}
+
+				}
+				return ayarlar;
+			}
+		}
 	}
 }

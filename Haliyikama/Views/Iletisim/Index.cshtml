@@ -1,9 +1,21 @@
 ﻿@using Haliyikama.ViewModels
+@using Haliyikama.Data.Models
 @{ var data = Model.iletisim;}
+
+@{
+
+	var a = ((IEnumerable<Iletisim>)Model.iletisim).Cast<dynamic>();
+
+	var query = (from p in a
+				 where p.IletisimId == 1
+
+				 select p).ToList().First();
+
+}
 <div class="container-fluid Banner-Backgroun">
 	<div class="container">
 		<div class="jumbotron">
-			<h1>İLETİŞİM</h1>
+			<h1>İLETİŞİM </h1>
 			<p>Değerli Arnavutköy sakinleri, yaşam alanlarınızda bulunan her cins ve her ebattaki halıların temizleme </p>
 
 		</div>
@@ -20,12 +32,11 @@
 <section class="contactus-one" id="contactus">
 	<!-- Section id-->
 	<div class="container">
-		@foreach (var iletisim in data)
-		{
+
 			<div class="row">
 				<div class="col-md-6 col-sm-12 col-xs-12">
 					<div class="map">
-						<iframe src="@iletisim.MapLink" height="580"></iframe>
+						<iframe src="@query.MapLink" height="580"></iframe>
 					</div>
 				</div>
 				<div class=" col-md-5 col-sm-12 col-xs-12">
@@ -60,16 +71,16 @@
 
 						<div class=" row contact-info">
 							<div class="col-md-12 col-sm-12">
-								<p class="addre"><i class="fa fa-map-marker"></i>@iletisim.Address</p>
+								<p class="addre"><i class="fa fa-map-marker"></i>@query.Address</p>
 							</div>
 							<div class="col-md-12 col-sm-12">
-								<p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">@iletisim.Phone1</a></p>
+								<p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">@query.Phone1</a></p>
 							</div>
 							<div class="col-md-12 col-sm-12">
-								<p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">@iletisim.Phone2</a></p>
+								<p class="phone-call"><i class="fa fa-phone"></i> <a href="tel:+10484579845">@query.Phone2</a></p>
 							</div>
 							<div class="col-md-12 col-sm-12">
-								<p class="mail-id"><i class="fa fa-envelope"></i>@iletisim.Email</p>
+								<p class="mail-id"><i class="fa fa-envelope"></i>@query.Email</p>
 							</div>
 						</div>
 
@@ -80,6 +91,6 @@
 					</div>
 				</div>
 			</div>
-		}
-		</div>
+		
+	</div>
 </section> 

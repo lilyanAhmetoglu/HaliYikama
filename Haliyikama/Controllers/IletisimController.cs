@@ -17,6 +17,7 @@ namespace Haliyikama.Controllers
 		}
 		public IActionResult Index()
         {
+			
 			IletisimViewModel IletisimVM = new IletisimViewModel();
 			IletisimVM.iletisim = _iletisim.iletisim;
             return View(IletisimVM);
