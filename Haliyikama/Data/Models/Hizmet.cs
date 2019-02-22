@@ -7,6 +7,10 @@ namespace Haliyikama.Data.Models
 {
 	public class Hizmet
 	{
+		public Hizmet()
+		{
+		}
+
 		public int HizmetId { get; set; }
 		public string Name { get; set; }
 		public string ShortDescription { get; set; }
