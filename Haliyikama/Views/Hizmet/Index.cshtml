@@ -5,12 +5,12 @@
 
 }
 
-<div class="container-fluid Banner-Backgroun" >
+<div class="container-fluid Banner-Backgroun">
 	<div class="container">
 		<div class="jumbotron">
 			<h1>HİZMETLERİMİZ</h1>
 			<p>Değerli Arnavutköy sakinleri, yaşam alanlarınızda bulunan her cins ve her ebattaki halıların temizleme </p>
-			
+
 		</div>
 		<div class="row">
 
@@ -20,7 +20,7 @@
 			</ul>
 		</div>
 	</div>
-	
+
 
 </div>
 
@@ -35,7 +35,7 @@
 						<div class="caption">
 							<h3 class="pull-right">@hizmet.Price.ToString("c")</h3>
 							<h3>
-								<a>@hizmet.Name</a>
+								<a href="/hizmet/detail/@hizmet.HizmetId">@hizmet.Name</a>
 							</h3>
 							<p>@hizmet.ShortDescription</p>
 						</div>

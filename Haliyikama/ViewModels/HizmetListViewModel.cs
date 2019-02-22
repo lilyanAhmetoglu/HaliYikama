@@ -10,6 +10,8 @@ namespace Haliyikama.ViewModels
 	{
 		public IEnumerable<Hizmet> Hizmetler{ get; set; }
 		public IEnumerable<Ayarlar> Ayarlar { get; set; }
+		public Hizmet hizmet { get; set; }
+		public List<AltHizmet> AltHizmetler { get; set; }
 
 	}
 }

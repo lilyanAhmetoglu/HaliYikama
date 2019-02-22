@@ -1,0 +1,54 @@
+﻿@using Haliyikama.ViewModels
+@using Haliyikama.Data.Models
+
+@{
+
+
+	var hizmet = Model.hizmet;
+
+}
+<div class="container-fluid Banner-Backgroun">
+	<div class="container">
+		<div class="jumbotron">
+			<h1>@hizmet.Name</h1>
+			<p>@hizmet.ShortDescription </p>
+
+		</div>
+		<div class="row">
+
+			<ul class="breadcrumb">
+				<li><a href="/">Home</a></li>
+				<li><a href="/Hizmet">Hizmetler</a></li>
+				<li class="active">@hizmet.Name</li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-9 col-md-9">
+
+				<p>@hizmet.LongDescription </p>
+
+			</div>
+			<div class="col-xs-12 col-sm-3 col-md-3">
+				<div class="single category" style="text-align:center">
+					<h3 class="side-title">Alt Hizmetler</h3>
+					<ul class="list-unstyled">
+						
+						@foreach (var m in hizmet.AltHizmetler)
+						{
+							<li><a href="#">@m.Name</a></li>
+						}
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+

@@ -11,5 +11,6 @@ namespace Haliyikama.Data.interfaces
 		IEnumerable<Hizmet> Hizmetler { get; }
 		IEnumerable<Hizmet> IsdsicountedHizmet { get;}
 		Hizmet getHizmetById(int id);
+		List<AltHizmet> getAltHizmetlerById(int id);
 	}
 }

@@ -41,6 +41,11 @@ namespace Haliyikama.Data.mocks
 		}
 		public IEnumerable<Hizmet> IsdsicountedHizmet { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
+		public List<AltHizmet> getAltHizmetlerById(int id)
+		{
+			throw new NotImplementedException();
+		}
+
 		public Hizmet getHizmetById(int id)
 		{
 			throw new NotImplementedException();

@@ -20,19 +20,25 @@ namespace Haliyikama.Controllers
 			_altHizmet = altHizmet;
 			_ayarlar = ayarlar;
 		}
-		public ViewResult List()
+		public ViewResult Index()
 		{
 			//	var hizmetler = _hizmet.Hizmetler;
 			var HizmetVM = new HizmetListViewModel {
 				Hizmetler = _hizmet.Hizmetler ,
 			    Ayarlar = _ayarlar.ayarlar
-
-
 			  };
 			
+    		return View(HizmetVM);
 
+		}
+		public ViewResult Detail(int id) {
+			var HizmetVM = new HizmetListViewModel
+			{
+				AltHizmetler = _hizmet.getAltHizmetlerById(id),
+				hizmet = _hizmet.getHizmetById(id),
+				Ayarlar = _ayarlar.ayarlar
+			};
 			return View(HizmetVM);
-
 		}
 	}
 }
