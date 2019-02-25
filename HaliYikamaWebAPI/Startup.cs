@@ -64,9 +64,9 @@ namespace HaliYikamaWebAPI
 			{
 				app.UseHsts();
 			}
-
-			app.UseHttpsRedirection();
 			app.UseMvc();
+			app.UseDefaultFiles();
+			app.UseStaticFiles();
 		}
 	}
 }

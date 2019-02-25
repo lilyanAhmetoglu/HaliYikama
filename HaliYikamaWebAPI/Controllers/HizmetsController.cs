@@ -23,7 +23,7 @@ namespace HaliYikamaWebAPI.Controllers
 
         // GET: api/Hizmets
         [HttpGet]
-        public IEnumerable<Hizmet> GetHizmetler()
+		public IEnumerable<Hizmet> GetHizmetler()
         {
             return _context.Hizmetler;
         }
