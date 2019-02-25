@@ -3701,9 +3701,10 @@ div#sparklinehome canvas {
 #sidebar {
     background: #fff;
 }
-#sidebar .sidebar-header {
-    background: #fff;
-}
+	#sidebar .sidebar-header {
+		background: #fff;
+		margin-bottom: 40px;
+	}
 #sidebar.active .sidebar-header {
     padding-top:10px;
 	position:relative;
