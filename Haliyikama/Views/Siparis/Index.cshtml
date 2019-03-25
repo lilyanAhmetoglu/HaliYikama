@@ -18,58 +18,50 @@
 	<div class="container mb-4">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="table-responsive">
-					<table class="table table-striped">
-						<thead>
-							<tr>
+                <div class="table-responsive">
+                    <table class="table table-striped" id="mytable">
+                        <thead>
+                            <tr>
 
-								<th scope="col">Hizmet</th>
-								<th scope="col" class="text-center">Uzun</th>
-								<th scope="col" class="text-center">Geniş</th>
-								<th scope="col" class="text-center">Metre</th>
-								<th scope="col" class="text-center">Fiyat</th>
-								<th> </th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Product Name Dada</td>
-								<td class="text-center">200</td>
-								<td class="text-center">400</td>
-								<td class="text-center">80</td>
-								<td class="text-center">100 TL</td>
-								<td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-							</tr>
-							<tr>
+                                <th scope="col">Hizmet</th>
+                                <th scope="col" class="text-center">Uzun</th>
+                                <th scope="col" class="text-center">Geniş</th>
+                                <th scope="col" class="text-center">Metre</th>
+                                <th scope="col" class="text-center">Fiyat</th>
+                                <th> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">
+                                    <select name="hizmettibi">
+                                        <option value="10">Hali yikama</option>
+                                        <option value="20">Akrilik</option>
+                                    </select>
+                                </td>
+                                <td class="text-center"><input type="text" class="qty" value="0" name="qty" /></td>
+                                <td class="text-center"><input type="text" class="price" value="0" name="price" /></td>
+                                <td class="text-center"><input type="text" class="subtot" value="0" name="subtot" /></td>
+                                <td><input type="text" class="sonfiyat" value="0" name="sonfiyat" /></td>
+                                <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                            </tr>
+                          
+                        </tbody>
+                        @*
+            <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-right"><strong>Son Fiyat</strong></td>
+                <td><input type="text" class="grdtot" value="" name="" /></td>
+            </tr>
+        </tfoot>
+                        *@
 
-								<td>Product Name Dada</td>
-								<td class="text-center">200</td>
-								<td class="text-center">400</td>
-								<td class="text-center">80</td>
-								<td class="text-center">100 TL</td>
-								<td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-							</tr>
-							<tr>
-
-								<td>Product Name Dada</td>
-								<td class="text-center">200</td>
-								<td class="text-center">400</td>
-								<td class="text-center">80</td>
-								<td class="text-center">100 TL</td>
-								<td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-							</tr>
-						
-							<tr>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td class="text-center"><strong>Total</strong></td>
-								<td class="text-center"><strong>300 TL</strong></td>
-								<td></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+                    </table>
+                    <a href="#" id="insert-more"> Add New Row </a>
+                </div>
 			</div>
 
 		</div>

@@ -20,5 +20,11 @@ namespace HaliYikamaWebAPI.Controllers
 			
 			return View();
 		}
-	}
+        [Route("hizmetler/Hizmet-ekle")]
+        public ViewResult HizmetEkle()
+        {
+
+            return View();
+        }
+    }
 }
